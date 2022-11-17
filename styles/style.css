@@ -2,17 +2,55 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: #FAFAFA;
+    color: #131313;
 }
 
 header {
-    width: 100%;
-    background-color: aquamarine;
+    width: 100vw;
 }
 
-header .menu {
+header nav div{
+    margin: 0 16px;
+}
+
+.top-info {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0 16px;
-    background-color: blueviolet;
+    padding: 16px 0 0;
+}
+ 
+header nav a {
+    text-decoration: none;
+}
+
+header nav img {
+    width: 3em;
+}
+
+span#burguer {
+    font-size: 2.5em;
+    color: #131313;
+    cursor: pointer;
+}
+
+menu#itens {
+    width: 100vw;
+    background: rgba(255,255,255, .0);
+    display: none;
+    justify-content: right;
+    position: absolute;
+}
+
+#itens ul {
+    list-style: none;
+    width: 45vw;
+}
+
+.item {
+    display: block;
+    border: 1px solid #131313;
+    padding: 10px;
+    font-size: 1.3rem;
 }
