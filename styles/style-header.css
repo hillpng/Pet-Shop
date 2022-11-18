@@ -10,11 +10,37 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
+input[type="checkbox"] {
+    display: none;
+}
+
+label {
+    position: absolute;
+    padding: 15px;
+}
+
+nav {
+    background-color: rgba(16, 16, 16, .5);
+    width: 50vw;
+    height: 100vh;
+    position: relative;
+}
+
 ul {
     list-style: none;
+    position: absolute;
+    top: 60px;
+    width: 100%;
 }
 
 a {
     text-decoration: none;
+    color: #FAFAFA;
+    display: block;
+    padding: 16px 8px;
+}
+
+a:hover {
+    background-color: rgb(176, 224, 230);
     color: #131313;
 }
