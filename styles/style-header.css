@@ -10,34 +10,57 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
-input[type="checkbox"] {
+header {
+    display: flex;
+    flex-direction: column;
+}
+
+#check {
     display: none;
 }
 
 label {
-    position: absolute;
+    z-index: 1;
+    width: 54px;
+}
+
+.material-icons {
     padding: 15px;
 }
 
-nav {
+.menu {
     background-color: rgba(16, 16, 16, .5);
     width: 50vw;
     height: 100vh;
-    position: relative;
+    left: -50vw;
+    position: absolute;
+    transition: all .5s;
+
 }
 
+#check:checked ~ .menu{
+    transform: translateX(50vw);
+}
+#check:checked ~ label {
+    transition: .5s;
+    color: #FAFAFA;
+}
+ 
 ul {
     list-style: none;
-    position: absolute;
-    top: 60px;
     width: 100%;
+    padding-top: 54px;
+}
+
+li {
+    border-bottom: 1px solid #131313;
 }
 
 a {
     text-decoration: none;
     color: #FAFAFA;
     display: block;
-    padding: 16px 8px;
+    padding: 16px 32px;
 }
 
 a:hover {
