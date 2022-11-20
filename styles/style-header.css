@@ -22,6 +22,7 @@ header {
 
 label {
     z-index: 1;
+    background-color: #a25b32;
 }
 
 .material-icons {
@@ -29,21 +30,21 @@ label {
 }
 
 .menu {
-    background-color: rgba(16, 16, 16, .5);
     width: 40vw;
     height: 100vh;
     left: -40vw;
     position: absolute;
-    transition: all .5s;
+    /* transition: all .5s; */
     background-color: #FFEFBD;
 }
 
 #check:checked ~ .menu{
     transform: translateX(40vw);
 }
+
 #check:checked ~ label {
     transition: .5s;
-    color: #a25b32;
+    color: #FAFAFA;
 }
  
 ul {
@@ -67,4 +68,26 @@ a:hover {
     background-color: #a25b32;;
     color: #FAFAFA;
     font-weight: 600;
+}
+
+@media screen and (min-width: 768px) {
+    header {
+        flex-direction: row;
+    }
+
+    label {
+        display: none;
+    }
+    .menu {
+        width: 100vw;
+        position: static;
+    }
+
+    li {
+        display: inline;
+    }
+
+    a {
+        display: inline-block;
+    }
 }
