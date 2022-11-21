@@ -16,6 +16,13 @@ header {
     flex-direction: column;
 }
 
+.nav {
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 #check {
     display: none;
 }
@@ -24,13 +31,6 @@ header {
     padding: 16px;
     z-index: 1;
     color: #a25b32;
-}
-
-.nav {
-    z-index: 2;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
 }
 
 .logo-link {
@@ -78,12 +78,17 @@ li {
 
 a:hover {
     background-color: #a25b32;
-    ;
     color: #FAFAFA;
     font-weight: 600;
 }
 
 @media screen and (min-width: 768px) {
+    header {
+        width: 100vw;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
     .botao-burguer {
         display: none;
     }
@@ -97,7 +102,7 @@ a:hover {
 
     ul {
         padding-top: 0px;
-
+        width: 100vw;
     }
 
     li {
