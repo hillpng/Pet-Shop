@@ -20,13 +20,25 @@ header {
     display: none;
 }
 
-label {
+.botao-burguer {
+    padding: 16px;
     z-index: 1;
-    background-color: #a25b32;
+    color: #a25b32;
 }
 
-.material-icons {
+.nav {
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-link {
     padding: 16px;
+}
+
+img {
+    width: 2.5em;
 }
 
 .menu {
@@ -38,15 +50,15 @@ label {
     background-color: #FFEFBD;
 }
 
-#check:checked ~ .menu{
+#check:checked~.menu {
     transform: translateX(40vw);
 }
 
-#check:checked ~ label {
+#check:checked~.botao-burguer {
     transition: .5s;
-    color: #FAFAFA;
+    color: #a25b32;
 }
- 
+
 ul {
     list-style: none;
     width: 100%;
@@ -57,7 +69,7 @@ li {
     border-bottom: 1px solid rgba(162, 91, 50, 0.3);
 }
 
-a {
+.link {
     text-decoration: none;
     color: #a25b32;
     display: block;
@@ -65,29 +77,31 @@ a {
 }
 
 a:hover {
-    background-color: #a25b32;;
+    background-color: #a25b32;
+    ;
     color: #FAFAFA;
     font-weight: 600;
 }
 
 @media screen and (min-width: 768px) {
-    header {
-        flex-direction: row;
-    }
-
-    label {
+    .botao-burguer {
         display: none;
     }
+
     .menu {
         width: 100vw;
+        height: 60px;
         position: static;
+        background-color: #FAFAFA;
+    }
+
+    ul {
+        padding-top: 0px;
+
     }
 
     li {
-        display: inline;
-    }
-
-    a {
         display: inline-block;
     }
+
 }
